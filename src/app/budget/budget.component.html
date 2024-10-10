@@ -1,0 +1,11 @@
+<ActionBar title="Budget Overview"></ActionBar>
+
+<ListView [items]="budgetCategories" class="list-group">
+  <ng-template let-category="item">
+    <GridLayout rows="auto, auto" columns="*, auto" class="list-group-item">
+      <Label [text]="category.name" row="0" col="0" class="text-lg"></Label>
+      <Label [text]="'$' + category.spent + ' / $' + category.budgeted" row="0" col="1" class="text-sm"></Label>
+      <Progress [value]="category.spent" [maxValue]="category.budgeted" row="1" colSpan="2" class="m-2"></Progress>
+    </GridLayout>
+  </ng-template>
+</ListView>

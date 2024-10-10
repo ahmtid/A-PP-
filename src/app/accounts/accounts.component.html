@@ -1,0 +1,10 @@
+<ActionBar title="Accounts"></ActionBar>
+
+<ListView [items]="accounts" class="list-group">
+  <ng-template let-account="item">
+    <StackLayout class="list-group-item">
+      <Label [text]="account.name" class="text-lg"></Label>
+      <Label [text]="'$' + account.balance" [class]="account.balance >= 0 ? 'text-green-600' : 'text-red-600'"></Label>
+    </StackLayout>
+  </ng-template>
+</ListView>

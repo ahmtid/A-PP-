@@ -1,0 +1,11 @@
+<ActionBar title="Investments"></ActionBar>
+
+<ListView [items]="investments" class="list-group">
+  <ng-template let-investment="item">
+    <GridLayout rows="auto" columns="*, auto, auto" class="list-group-item">
+      <Label [text]="investment.name" row="0" col="0" class="text-lg"></Label>
+      <Label [text]="'$' + investment.value" row="0" col="1" class="text-sm"></Label>
+      <Label [text]="investment.change + '%'" row="0" col="2" [class]="investment.change >= 0 ? 'text-green-600' : 'text-red-600'"></Label>
+    </GridLayout>
+  </ng-template>
+</ListView>

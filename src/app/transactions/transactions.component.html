@@ -1,0 +1,11 @@
+<ActionBar title="Recent Transactions"></ActionBar>
+
+<ListView [items]="transactions" class="list-group">
+  <ng-template let-transaction="item">
+    <GridLayout rows="auto" columns="*, *, auto" class="list-group-item">
+      <Label [text]="transaction.date" row="0" col="0" class="text-sm"></Label>
+      <Label [text]="transaction.description" row="0" col="1" class="text-sm"></Label>
+      <Label [text]="'$' + transaction.amount" row="0" col="2" [class]="transaction.amount >= 0 ? 'text-green-600' : 'text-red-600'"></Label>
+    </GridLayout>
+  </ng-template>
+</ListView>

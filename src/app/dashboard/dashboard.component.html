@@ -1,0 +1,19 @@
+<ActionBar title="Finance Dashboard"></ActionBar>
+
+<ScrollView>
+  <StackLayout class="p-4">
+    <Label text="Welcome to Your Finance Dashboard" class="text-2xl font-bold mb-4"></Label>
+    
+    <GridLayout rows="auto, auto" columns="*, *" class="mb-4">
+      <Label text="Total Balance" row="0" col="0" class="text-lg"></Label>
+      <Label text="$10,000" row="0" col="1" class="text-lg text-right text-green-600"></Label>
+      <Label text="Monthly Spending" row="1" col="0" class="text-lg"></Label>
+      <Label text="$2,500" row="1" col="1" class="text-lg text-right text-red-600"></Label>
+    </GridLayout>
+
+    <Button text="View Accounts" [nsRouterLink]="['/accounts']" class="btn btn-primary mb-2"></Button>
+    <Button text="Recent Transactions" [nsRouterLink]="['/transactions']" class="btn btn-secondary mb-2"></Button>
+    <Button text="Budget Overview" [nsRouterLink]="['/budget']" class="btn btn-info mb-2"></Button>
+    <Button text="Investments" [nsRouterLink]="['/investments']" class="btn btn-success"></Button>
+  </StackLayout>
+</ScrollView>
